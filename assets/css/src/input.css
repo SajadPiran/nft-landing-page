@@ -2,13 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base{
+
+    body{ font-family: 'Inter' }
+
+}
+
+
 @layer components {
 
-    .orbitron-test {
+    .font-orbitron { font-family: "Orbitron"; }
 
-        font-family: "Orbitron";
-        font-weight: 100;
-        font-style: normal;
+    .padding {
+        @apply px-4;
+        @apply sm:px-10;
+        @apply md:px-20;
     }
 
+    .color { background: linear-gradient( to left , #2600FC , #FF00EA ) ;}
 }
