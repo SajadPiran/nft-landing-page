@@ -4,7 +4,14 @@
 
 @layer base{
 
-    body{ font-family: 'Inter' }
+    body{
+
+        font-family: 'Inter';
+        background: url("../img/div.background.webp") no-repeat;
+        background-size: cover;
+        @apply flex flex-col items-center justify-center;
+
+    }
 
 }
 
@@ -12,12 +19,19 @@
 @layer components {
 
     .font-orbitron { font-family: "Orbitron"; }
-
     .padding {
         @apply px-4;
         @apply sm:px-10;
         @apply md:px-20;
     }
 
-    .color { background: linear-gradient( to left , #2600FC , #FF00EA ) ;}
+    .gradient-color { background: linear-gradient( to left , #2600FC , #FF00EA ) ;}
+
+    .logo-carousel { animation: logo-carousel infinite 60s linear }
+    @keyframes logo-carousel {
+
+        to { transform: translateX(0) }
+        from { transform: translateX(-100%) }
+    }
+
 }
