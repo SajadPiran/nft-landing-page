@@ -1,4 +1,6 @@
 import Swiper from './swiper/swiper-bundle.min.mjs';
+import Navigation from './swiper/modules/navigation.min.mjs';
+import {f} from "./swiper/shared/utils.mjs";
 
 $(document).ready( ()=>{
 
@@ -106,11 +108,34 @@ $(document).ready( ()=>{
 
     const swiperObject = new Swiper('.swiper' , {
 
+        modules: [Navigation],
         slidesPerView : totalSlide,
         speed : 1000,
         autoplay : true,
 
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
         pagination: { el: '.swiper-pagination' },
+        on: {
+
+            activeIndexChange : function (swiper) {
+
+                console.log( swiper )
+                if( swiper.activeIndex === 0  ) {
+                    $( swiper.navigation.prevEl ).addClass('swiper-button--disabled');
+                }else{  $( swiper.navigation.prevEl ).removeClass('swiper-button--disabled');}
+
+                if( swiper.activeIndex === swiper.slides.length - 1  ) {
+
+                    $( swiper.navigation.nextEl ).addClass('swiper-button--disabled');
+                }else{  $( swiper.navigation.nextEl ).removeClass('swiper-button--disabled');}
+
+            }
+
+        }
+
 
     })
     swiperObject.snapGrid = calculateWrapperTranslate( swiperSlides.length - totalSlide );

@@ -52,11 +52,11 @@
     .swiper-pagination-bullet{
         @apply block w-2 h-2;
         @apply relative;
-        @apply bg-gray-300;
+        @apply bg-gray-300 dark:bg-gray-600;
         border-radius: 50%;
 
     }
-    .swiper-pagination-bullet-active{@apply bg-black}
+    .swiper-pagination-bullet-active{@apply bg-black dark:bg-white ;}
 
     .swiper-slide {
         width: var(--swiper-slide-width) !important;

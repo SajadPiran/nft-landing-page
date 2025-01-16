@@ -176,6 +176,19 @@
                 </clipPath>
             </defs>
         </symbol>
+        <symbol viewBox="0 0 320 512" id="short-arrow" xmlns="http://www.w3.org/2000/svg" >
+            <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+        </symbol>
+        <symbol  viewBox="0 0 25 26" id="arrow" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1_948)">
+                <path d="M3.14014 5.05005V6.55005H12.5854L0.140137 18.9954L1.19482 20.05L13.6401 7.60474V17.05H15.1401V5.05005H3.14014Z" fill="white"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_1_948">
+                    <rect width="24" height="25" fill="white" transform="matrix(1 0 0 -1 0.140137 25.05)"/>
+                </clipPath>
+            </defs>
+        </symbol>
 
     </svg>
 
@@ -378,9 +391,9 @@
         <h2 class="w-1/2 text-center text-[calc(2rem+.5vw)] dark:text-white font-bold opacity-0" data-animation="collection-title" data-animation-delay="100" >Nerko's <span class="gradient-text-color opacity-0" data-animation="collection-title" data-animation-delay="200">Collection</span></h2>
 
         <!--Collections-->
-        <section class="h-[420px] flex gap-x-4 container swiper mt-10 opacity-0" data-animation="collection-slider" data-animation-delay="300">
+        <section class="h-[420px] lg:h-[400px] flex gap-x-4 container swiper mt-10 relative" data-animation="collection-slider" data-animation-delay="300">
 
-            <section class="swiper-wrapper relative" >
+            <section class=" swiper-wrapper relative" >
 
                 <section class="flex flex-col items-center flex-shrink-0  swiper-slide">
 
@@ -489,14 +502,33 @@
 
             </section>
 
+            <section class="w-full fixed inset-0 flex justify-between z-10" >
+
+                <div class="w-6 h-6 flex items-center justify-center bg-white absolute top-[35%] left-0 rounded-[50%] z-10 swiper-button-prev swiper-button--disabled">
+
+                    <svg class="w-3 h-3 rotate-180  cursor-pointer"> <use href="#short-arrow" ></use> </svg>
+
+                </div>
+                <div class="w-6 h-6 flex items-center justify-center bg-white absolute top-[35%] right-0 rounded-[50%] z-10 swiper-button-next">
+
+                    <svg class="w-3 h-3  cursor-pointer"> <use href="#short-arrow" ></use> </svg>
+
+                </div>
+
+            </section>
+
             <section class="swiper-pagination w-full flex justify-center gap-x-4">
 
                 <span class="swiper-pagination-bullet swiper-pagination-bullet-active" ></span>
 
             </section>
 
-
         </section>
+
+        <a href="" class="w-fit flex gap-x-2 items-center text-white text-xs text-center mt-10 py-3 px-4 rounded-[2rem] gradient-color "  >
+            View collection
+            <svg class="w-4 h-4"> <use href="#arrow" ></use> </svg>
+        </a>
 
     </section>
 
