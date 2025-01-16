@@ -13,6 +13,12 @@
 
     }
 
+    :root {
+
+        --swiper-slide-width : 260px;
+
+    }
+
 }
 
 
@@ -26,12 +32,28 @@
     }
 
     .gradient-color { background: linear-gradient( to left , #2600FC , #FF00EA ) ;}
+    .gradient-text-color {
+        background: linear-gradient( to left , #2600FC , #FF00EA ) ;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
-    .logo-carousel { animation: logo-carousel infinite 60s linear }
+    .logo-carousel { animation: logo-carousel infinite 60s linear; }
     @keyframes logo-carousel {
 
         to { transform: translateX(0) }
         from { transform: translateX(-100%) }
     }
 
+    .swiper-pagination{ @apply absolute bottom-0; }
+    .swiper-pagination-bullet{
+        @apply block w-2 h-2;
+        @apply relative;
+        @apply bg-gray-300;
+        border-radius: 50%;
+
+    }
+    .swiper-pagination-bullet-active{@apply bg-black}
+
+    .swiper-slide { width: var(--swiper-slide-width) !important; }
 }

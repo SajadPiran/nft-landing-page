@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/swiper.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
@@ -319,7 +320,7 @@
             </section>
 
             <!--Images-->
-            <section class="w-full max-w-[350px] md:max-w-[450px] flex flex-col mt-14 relative ">
+            <section class="w-full max-w-[350px] md:max-w-[450px] flex flex-col mt-14 relative " >
 
                 <img src="assets/img/div.main-image2.webp" loading="lazy" class="w-40 md:w-52 xl:w-60 opacity-0 -rotate-[20deg] z-10" alt="" data-animation="main-image" data-animation-delay="100" >
                 <img src="assets/img/div.main-image.webp" loading="lazy" class="w-40 md:w-52 xl:w-60 self-end opacity-0 rotate-[20deg] z-10" alt="" data-animation="main-image" data-animation-delay="110" >
@@ -342,7 +343,7 @@
         </section>
 
         <!--Wallet Carousel-->
-        <section class="flex flex-col gap-y-4 mt-14 overflow-hidden">
+        <section class="flex flex-col gap-y-4 mt-14 overflow-hidden opacity-0" data-animation="main-carousel">
 
             <section class="w-full flex justify-center lg:justify-start gap-6 lg:gap-12 logo-carousel">
 
@@ -367,9 +368,88 @@
 
     </main>
 
+    <section class="my-20">
+        <img src="assets/img/divider.svg" alt="">
+    </section>
+
+    <!--Collection-->
+    <section class="container flex flex-col items-center padding">
+
+        <h2 class="w-1/2 text-center text-[calc(2rem+.5vw)] dark:text-white font-bold">Nerko's <span class="gradient-text-color">Collection</span></h2>
+
+        <!--Collections-->
+        <section class="h-[450px] flex gap-x-4 container swiper mt-10 ">
+
+            <section class="swiper-wrapper relative" >
+
+                <section class="flex flex-col items-center flex-shrink-0  swiper-slide">
+
+                    <img src="assets/img/art_01.webp" class="w-60" alt="">
+
+                    <!--Title & Artist-->
+                    <section class="flex flex-col items-center mt-4">
+
+                        <h3 class="font-bold text-[calc(1rem+.75vw)] dark:text-white">#Metaverse</h3>
+                        <span class="text-gray-500 text-[calc(0.75rem+.25vw)]">By TheSalvare</span>
+
+                    </section>
+
+                </section>
+                <section class="flex flex-col items-center flex-shrink-0  swiper-slide">
+
+                    <img src="assets/img/art_02.webp" class="w-60" alt="">
+
+                    <!--Title & Artist-->
+                    <section class="flex flex-col items-center mt-4">
+
+                        <h3 class="font-bold text-[calc(1rem+.75vw)] dark:text-white">#Polly Poll</h3>
+                        <span class="text-gray-500 text-[calc(0.75rem+.25vw)]">By TheNative</span>
+
+                    </section>
+
+                </section>
+                <section class="flex flex-col items-center flex-shrink-0  swiper-slide">
+
+                    <img src="assets/img/art_03.webp" class="w-60" alt="">
+
+                    <!--Title & Artist-->
+                    <section class="flex flex-col items-center mt-4">
+
+                        <h3 class="font-bold text-[calc(1rem+.75vw)] dark:text-white">#Alec Art</h3>
+                        <span class="text-gray-500 text-[calc(0.75rem+.25vw)]">By GeorgZvic</span>
+
+                    </section>
+
+                </section>
+                <section class="flex flex-col items-center flex-shrink-0  swiper-slide">
+
+                    <img src="assets/img/art_04.webp" class="w-60" alt="">
+
+                    <!--Title & Artist-->
+                    <section class="flex flex-col items-center mt-4">
+
+                        <h3 class="font-bold text-[calc(1rem+.75vw)] dark:text-white">#Toxic Poeth</h3>
+                        <span class="text-gray-500 text-[calc(0.75rem+.25vw)]">By YazoiLup</span>
+
+                    </section>
+
+                </section>
+
+            </section>
+            <section class="swiper-pagination w-full flex justify-center gap-x-4">
+
+                <span class="swiper-pagination-bullet swiper-pagination-bullet-active" ></span>
+
+            </section>
+
+
+        </section>
+
+    </section>
+
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/anime.min.js"></script>
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/index.js" type="module"></script>
 
 </body>
 

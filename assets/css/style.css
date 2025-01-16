@@ -564,6 +564,10 @@ body{
   justify-content: center;
 }
 
+:root {
+  --swiper-slide-width : 260px;
+}
+
 .container {
   width: 100%;
 }
@@ -625,8 +629,14 @@ body{
   background: linear-gradient( to left , #2600FC , #FF00EA ) ;
 }
 
+.gradient-text-color {
+  background: linear-gradient( to left , #2600FC , #FF00EA ) ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .logo-carousel {
-  animation: logo-carousel infinite 60s linear
+  animation: logo-carousel infinite 60s linear;
 }
 
 @keyframes logo-carousel {
@@ -637,6 +647,30 @@ body{
   from {
     transform: translateX(-100%)
   }
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 0px;
+}
+
+.swiper-pagination-bullet {
+  display: block;
+  height: 0.5rem;
+  width: 0.5rem;
+  position: relative;
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
+.swiper-slide {
+  width: var(--swiper-slide-width) !important;
 }
 
 .fixed {
@@ -711,6 +745,11 @@ body{
   z-index: 50;
 }
 
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .-ml-6 {
   margin-left: -1.5rem;
 }
@@ -767,8 +806,16 @@ body{
   height: 2rem;
 }
 
+.h-\[450px\] {
+  height: 450px;
+}
+
 .h-full {
   height: 100%;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .w-16 {
@@ -799,6 +846,10 @@ body{
   width: 1.5rem;
 }
 
+.w-60 {
+  width: 15rem;
+}
+
 .w-8 {
   width: 2rem;
 }
@@ -814,6 +865,10 @@ body{
 
 .max-w-\[350px\] {
   max-width: 350px;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
 }
 
 .-rotate-\[20deg\] {
@@ -964,6 +1019,14 @@ body{
   line-height: 2rem;
 }
 
+.text-\[calc\(0\.75rem\+\.25vw\)\] {
+  font-size: calc(0.75rem + .25vw);
+}
+
+.text-\[calc\(1rem\+\.75vw\)\] {
+  font-size: calc(1rem + .75vw);
+}
+
 .text-\[calc\(2rem\+\.5vw\)\] {
   font-size: calc(2rem + .5vw);
 }
@@ -984,6 +1047,10 @@ body{
 
 .font-black {
   font-weight: 900;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .font-medium {

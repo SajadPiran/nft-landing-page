@@ -1,3 +1,5 @@
+import Swiper from './swiper/swiper-bundle.min.mjs';
+
 $(document).ready( ()=>{
 
     // Theme
@@ -64,6 +66,54 @@ $(document).ready( ()=>{
         }
 
     });
+
+
+    //Collection
+    function calculateTotalSlides(slidesContainer , slides ){
+
+        for (let slide = 0; slide < slides.length; slide++) {
+
+            let slideNumber = slide + 1;
+            if( ( slides[slide].clientWidth ) * slideNumber > slidesContainer.clientWidth ){
+
+                return slide;
+
+            }
+
+        }
+
+    }
+    function calculateWrapperTranslate( slidePerView ) {
+
+        const swiperSlideWidth = +
+         getComputedStyle( document.documentElement )
+        .getPropertyValue('--swiper-slide-width')
+        .replace('px' , '');
+
+        let swiperWrapperSnapGrid = [];
+        for (let slide = 0; slide < slidePerView; slide++) {
+
+            if( 0 === slide) { swiperWrapperSnapGrid.push( -0 ) }
+            swiperWrapperSnapGrid.push( swiperSlideWidth * ( slide + 1 ) )
+
+        }
+        return swiperWrapperSnapGrid;
+    }
+
+    const swiper = $('.swiper')[0];
+    const swiperSlides = $('.swiper').find('.swiper-slide').toArray();
+    const totalSlide = calculateTotalSlides( swiper , swiperSlides ) ;
+
+    const swiperObject = new Swiper('.swiper' , {
+
+        slidesPerView : totalSlide,
+        speed : 1000,
+        autoplay : true,
+
+        pagination: { el: '.swiper-pagination' },
+
+    })
+    swiperObject.snapGrid = calculateWrapperTranslate( swiperSlides.length - totalSlide );
 
 
     // Animation
@@ -166,7 +216,7 @@ $(document).ready( ()=>{
                             const observedTarget = observedSection.target;
                             const animationDelay = + $( observedTarget ).attr( 'data-animation-delay' );
                             const observedTargetRotate = getComputedStyle( observedTarget )
-                                                               .getPropertyValue('--tw-rotate');
+                                .getPropertyValue('--tw-rotate');
 
                             anime( {
 
@@ -197,7 +247,20 @@ $(document).ready( ()=>{
                             $( observedTarget ).attr( 'data-has-animated' , true ) ;
 
                         },
+                        carousel : function () {
 
+                            const observedTarget = observedSection.target;
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateX : [ 300 , 0 ],
+                                duration : 1500,
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        }
                     }
 
                 }
