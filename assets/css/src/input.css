@@ -17,8 +17,10 @@
 
         --swiper-slide-width : 260px;
 
-    }
+        @media (min-width:1024px) {  --swiper-slide-width: 200px  }
 
+    }
+    img { object-fit: cover; }
 }
 
 
@@ -39,6 +41,7 @@
     }
 
     .logo-carousel { animation: logo-carousel infinite 60s linear; }
+    .logo-carousel img { object-fit: contain; }
     @keyframes logo-carousel {
 
         to { transform: translateX(0) }
@@ -55,5 +58,8 @@
     }
     .swiper-pagination-bullet-active{@apply bg-black}
 
-    .swiper-slide { width: var(--swiper-slide-width) !important; }
+    .swiper-slide {
+        width: var(--swiper-slide-width) !important;
+        @apply lg:ml-4;
+    }
 }

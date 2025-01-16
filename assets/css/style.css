@@ -566,6 +566,14 @@ body{
 
 :root {
   --swiper-slide-width : 260px;
+  @media (min-width:1024px) {
+    --swiper-slide-width: 200px  
+  }
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .container {
@@ -639,6 +647,11 @@ body{
   animation: logo-carousel infinite 60s linear;
 }
 
+.logo-carousel img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 @keyframes logo-carousel {
   to {
     transform: translateX(0)
@@ -671,6 +684,12 @@ body{
 
 .swiper-slide {
   width: var(--swiper-slide-width) !important;
+}
+
+@media (min-width: 1024px) {
+  .swiper-slide {
+    margin-left: 1rem;
+  }
 }
 
 .fixed {
@@ -806,8 +825,12 @@ body{
   height: 2rem;
 }
 
-.h-\[450px\] {
-  height: 450px;
+.h-\[320px\] {
+  height: 320px;
+}
+
+.h-\[420px\] {
+  height: 420px;
 }
 
 .h-full {
@@ -948,6 +971,10 @@ body{
   text-wrap: balance;
 }
 
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
 .rounded-\[2rem\] {
   border-radius: 2rem;
 }
@@ -1019,12 +1046,8 @@ body{
   line-height: 2rem;
 }
 
-.text-\[calc\(0\.75rem\+\.25vw\)\] {
-  font-size: calc(0.75rem + .25vw);
-}
-
-.text-\[calc\(1rem\+\.75vw\)\] {
-  font-size: calc(1rem + .75vw);
+.text-\[calc\(1rem\+\.35vw\)\] {
+  font-size: calc(1rem + .35vw);
 }
 
 .text-\[calc\(2rem\+\.5vw\)\] {
@@ -1156,6 +1179,10 @@ body{
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:h-\[267px\] {
+    height: 267px;
   }
 
   .lg\:w-\[70\%\] {

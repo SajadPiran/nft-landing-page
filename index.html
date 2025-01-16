@@ -283,7 +283,7 @@
 
     </nav>
 
-    <main class="container padding mt-10 lg:mt-0">
+    <main class="container padding mt-10 lg:mt-0 overflow-hidden">
 
         <!--About Website & Images-->
         <section class="flex flex-col lg:flex-row lg:gap-x-20 items-center justify-around xl:gap-x-0" >
@@ -375,10 +375,10 @@
     <!--Collection-->
     <section class="container flex flex-col items-center padding">
 
-        <h2 class="w-1/2 text-center text-[calc(2rem+.5vw)] dark:text-white font-bold">Nerko's <span class="gradient-text-color">Collection</span></h2>
+        <h2 class="w-1/2 text-center text-[calc(2rem+.5vw)] dark:text-white font-bold opacity-0" data-animation="collection-title" data-animation-delay="100" >Nerko's <span class="gradient-text-color opacity-0" data-animation="collection-title" data-animation-delay="200">Collection</span></h2>
 
         <!--Collections-->
-        <section class="h-[450px] flex gap-x-4 container swiper mt-10 ">
+        <section class="h-[420px] flex gap-x-4 container swiper mt-10 opacity-0" data-animation="collection-slider" data-animation-delay="300">
 
             <section class="swiper-wrapper relative" >
 
@@ -389,8 +389,8 @@
                     <!--Title & Artist-->
                     <section class="flex flex-col items-center mt-4">
 
-                        <h3 class="font-bold text-[calc(1rem+.75vw)] dark:text-white">#Metaverse</h3>
-                        <span class="text-gray-500 text-[calc(0.75rem+.25vw)]">By TheSalvare</span>
+                        <h3 class="font-bold text-[calc(1rem+.35vw)] dark:text-white">#Metaverse</h3>
+                        <span class="text-gray-500 text-xs">By TheSalvare</span>
 
                     </section>
 
@@ -402,8 +402,8 @@
                     <!--Title & Artist-->
                     <section class="flex flex-col items-center mt-4">
 
-                        <h3 class="font-bold text-[calc(1rem+.75vw)] dark:text-white">#Polly Poll</h3>
-                        <span class="text-gray-500 text-[calc(0.75rem+.25vw)]">By TheNative</span>
+                        <h3 class="font-bold text-[calc(1rem+.35vw)] dark:text-white">#Polly Poll</h3>
+                        <span class="text-gray-500 text-xs">By TheNative</span>
 
                     </section>
 
@@ -415,8 +415,8 @@
                     <!--Title & Artist-->
                     <section class="flex flex-col items-center mt-4">
 
-                        <h3 class="font-bold text-[calc(1rem+.75vw)] dark:text-white">#Alec Art</h3>
-                        <span class="text-gray-500 text-[calc(0.75rem+.25vw)]">By GeorgZvic</span>
+                        <h3 class="font-bold text-[calc(1rem+.35vw)] dark:text-white">#Alec Art</h3>
+                        <span class="text-gray-500 text-xs">By GeorgZvic</span>
 
                     </section>
 
@@ -428,14 +428,67 @@
                     <!--Title & Artist-->
                     <section class="flex flex-col items-center mt-4">
 
-                        <h3 class="font-bold text-[calc(1rem+.75vw)] dark:text-white">#Toxic Poeth</h3>
-                        <span class="text-gray-500 text-[calc(0.75rem+.25vw)]">By YazoiLup</span>
+                        <h3 class="font-bold text-[calc(1rem+.35vw)] dark:text-white">#Toxic Poeth</h3>
+                        <span class="text-gray-500 text-xs">By YazoiLup</span>
+
+                    </section>
+
+                </section>
+                <section class="flex flex-col items-center flex-shrink-0  swiper-slide">
+
+                    <img src="assets/img/art_05.webp" class="w-60 h-[320px] lg:h-[267px] rounded-2xl" alt="">
+
+                    <!--Title & Artist-->
+                    <section class="flex flex-col items-center mt-4">
+
+                        <h3 class="font-bold text-[calc(1rem+.35vw)] dark:text-white">#Metaverse</h3>
+                        <span class="text-gray-500 text-xs">By TheSalvare</span>
+
+                    </section>
+
+                </section>
+                <section class="flex flex-col items-center flex-shrink-0  swiper-slide">
+
+                    <img src="assets/img/art_06.webp" class="w-60 h-[320px] lg:h-[267px] rounded-2xl" alt="">
+
+                    <!--Title & Artist-->
+                    <section class="flex flex-col items-center mt-4">
+
+                        <h3 class="font-bold text-[calc(1rem+.35vw)] dark:text-white">#Polly Poll</h3>
+                        <span class="text-gray-500 text-xs">By TheNative</span>
+
+                    </section>
+
+                </section>
+                <section class="flex flex-col items-center flex-shrink-0  swiper-slide">
+
+                    <img src="assets/img/art_07.webp" class="w-60 h-[320px] lg:h-[267px] rounded-2xl" alt="">
+
+                    <!--Title & Artist-->
+                    <section class="flex flex-col items-center mt-4">
+
+                        <h3 class="font-bold text-[calc(1rem+.35vw)] dark:text-white">#Alec Art</h3>
+                        <span class="text-gray-500 text-xs">By GeorgZvic</span>
+
+                    </section>
+
+                </section>
+                <section class="flex flex-col items-center flex-shrink-0  swiper-slide">
+
+                    <img src="assets/img/art_08.webp" class="w-60 h-[320px] lg:h-[267px] rounded-2xl" alt="">
+
+                    <!--Title & Artist-->
+                    <section class="flex flex-col items-center mt-4">
+
+                        <h3 class="font-bold text-[calc(1rem+.35vw)] dark:text-white">#Toxic Poeth</h3>
+                        <span class="text-gray-500 text-xs">By YazoiLup</span>
 
                     </section>
 
                 </section>
 
             </section>
+
             <section class="swiper-pagination w-full flex justify-center gap-x-4">
 
                 <span class="swiper-pagination-bullet swiper-pagination-bullet-active" ></span>

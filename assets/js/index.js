@@ -114,6 +114,8 @@ $(document).ready( ()=>{
 
     })
     swiperObject.snapGrid = calculateWrapperTranslate( swiperSlides.length - totalSlide );
+    swiperObject.slidesGrid = calculateWrapperTranslate( swiperSlides.length - totalSlide );
+    swiperObject.slidesSizesGrid = calculateWrapperTranslate( swiperSlides.length - totalSlide );
 
 
     // Animation
@@ -261,6 +263,42 @@ $(document).ready( ()=>{
                             $( observedTarget ).attr( 'data-has-animated' , true ) ;
 
                         }
+                    },
+                    collection : {
+
+                        title : function () {
+
+                            const observedTarget = observedSection.target;
+                            const animationDelay = + $( observedTarget ).attr( 'data-animation-delay' );
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateY : [ 30 , 0 ],
+                                duration : 1500,
+                                delay : animationDelay
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+                        slider : function () {
+
+                            const observedTarget = observedSection.target;
+                            const animationDelay = + $( observedTarget ).attr( 'data-animation-delay' );
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateY : [ 50 , 0 ],
+                                duration : 1500,
+                                delay : animationDelay
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+
                     }
 
                 }
@@ -274,7 +312,7 @@ $(document).ready( ()=>{
 
         });
 
-    }, { threshold : 0.4 } );
+    }, { threshold : 0.3 } );
     $( sectionAnimation ).each( ( index , section ) => { sectionAnimationObserver.observe( section ) } )
 
 
