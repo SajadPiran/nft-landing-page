@@ -8,9 +8,8 @@
 
         font-family: 'Inter';
         background: url("../img/div.background.webp") no-repeat;
-        background-size: cover;
         @apply flex flex-col items-center justify-center;
-
+        background-size: contain;
     }
 
     :root {

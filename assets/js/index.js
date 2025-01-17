@@ -391,6 +391,46 @@ $(document).ready( ()=>{
 
                         },
 
+                    },
+                    details : {
+
+                        item : function () {
+
+                            const observedTarget = observedSection.target;
+                            const animationDelay = + $( observedTarget ).attr( 'data-animation-delay' );
+
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateY : [ 50 , 0 ],
+                                duration : 1500,
+                                delay:animationDelay
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+                        shape : function () {
+
+                            const observedTarget = observedSection.target;
+                            const animationProperty = JSON.parse( $( observedTarget ).attr( 'data-animation-property' ) );
+                            anime( {
+
+                                targets : observedTarget,
+                                left : `${animationProperty.left}%`,
+                                top : `${ ( window.innerWidth >= 768 ) ? animationProperty.topMd : animationProperty.top }%`,
+                                rotate : [360 , 0] ,
+                                duration : animationProperty.duration,
+                                delay : animationProperty.delay,
+                                opacity:[ 0 , 1 ]
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+
+
                     }
 
                 }
