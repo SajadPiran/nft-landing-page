@@ -99,6 +99,7 @@ $(document).ready( ()=>{
 
         }
         return swiperWrapperSnapGrid;
+
     }
 
     const swiper = $('.swiper')[0];
@@ -462,6 +463,41 @@ $(document).ready( ()=>{
                                 translateY : [ 50 , 0 ],
                                 duration : 1500,
                                 delay:animationDelay
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+
+                    },
+                    subscribe : {
+
+                        container : function () {
+
+                            const observedTarget = observedSection.target;
+                            const animationDelay = + $( observedTarget ).attr( 'data-animation-delay' );
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateY : [ 50 , 0 ],
+                                duration : 1500,
+                                delay : animationDelay
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+                        shape : function () {
+
+                            const observedTarget = observedSection.target;
+                            const animationDelay = + $( observedTarget ).attr( 'data-animation-delay' );
+                            anime( {
+
+                                targets : observedTarget,
+                                duration : 1500,
+                                scale : [ 0 , 1 ],
+                                delay : animationDelay,
 
                             } );
                             $( observedTarget ).attr( 'data-has-animated' , true ) ;
