@@ -1,6 +1,5 @@
 import Swiper from './swiper/swiper-bundle.min.mjs';
 import Navigation from './swiper/modules/navigation.min.mjs';
-import {f} from "./swiper/shared/utils.mjs";
 
 $(document).ready( ()=>{
 
@@ -122,7 +121,6 @@ $(document).ready( ()=>{
 
             activeIndexChange : function (swiper) {
 
-                console.log( swiper )
                 if( swiper.activeIndex === 0  ) {
                     $( swiper.navigation.prevEl ).addClass('swiper-button--disabled');
                 }else{  $( swiper.navigation.prevEl ).removeClass('swiper-button--disabled');}
@@ -277,6 +275,7 @@ $(document).ready( ()=>{
                         carousel : function () {
 
                             const observedTarget = observedSection.target;
+
                             anime( {
 
                                 targets : observedTarget,
@@ -318,6 +317,74 @@ $(document).ready( ()=>{
                                 translateY : [ 50 , 0 ],
                                 duration : 1500,
                                 delay : animationDelay
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+                        button : function () {
+
+                            const observedTarget = observedSection.target;
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateY : [ -50 , 0 ],
+                                duration : 1500,
+
+                            } );
+
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+
+                    },
+                    whyUs : {
+
+                        title : function () {
+
+                            const observedTarget = observedSection.target;
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateY : [ 30 , 0 ],
+                                duration : 1500,
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+                        item : function () {
+
+                            const observedTarget = observedSection.target;
+                            const animationDelay = + $( observedTarget ).attr( 'data-animation-delay' );
+
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateY : [ 50 , 0 ],
+                                duration : 1500,
+                                delay:animationDelay
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+                        shape : function () {
+
+                            const observedTarget = observedSection.target;
+                            const animationProperty = JSON.parse( $( observedTarget ).attr( 'data-animation-property' ) );
+                            anime( {
+
+                                targets : observedTarget,
+                                left : `${animationProperty.left}%`,
+                                top : `${animationProperty.top}%`,
+                                rotate : [360 , 0] ,
+                                duration : animationProperty.duration,
+                                delay : animationProperty.delay,
+                                opacity:[ 0 , 1 ]
 
                             } );
                             $( observedTarget ).attr( 'data-has-animated' , true ) ;
