@@ -431,6 +431,43 @@ $(document).ready( ()=>{
                         },
 
 
+                    },
+                    howItWork: {
+
+                        title : function () {
+
+                            const observedTarget = observedSection.target;
+                            const animationDelay = + $( observedTarget ).attr( 'data-animation-delay' );
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateY : [ 30 , 0 ],
+                                duration : 1500,
+                                delay : animationDelay
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+                        item : function () {
+
+                            const observedTarget = observedSection.target;
+                            const animationDelay = + $( observedTarget ).attr( 'data-animation-delay' );
+
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateY : [ 50 , 0 ],
+                                duration : 1500,
+                                delay:animationDelay
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+
                     }
 
                 }
@@ -444,7 +481,7 @@ $(document).ready( ()=>{
 
         });
 
-    }, { threshold : 0.3 } );
+    }, { threshold : [ 0.2 , 0.3 ] } );
     $( sectionAnimation ).each( ( index , section ) => { sectionAnimationObserver.observe( section ) } )
 
 
