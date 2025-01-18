@@ -938,6 +938,10 @@ img {
   width: 0.75rem;
 }
 
+.w-32 {
+  width: 8rem;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -1086,6 +1090,10 @@ img {
 
 .gap-y-16 {
   row-gap: 4rem;
+}
+
+.gap-y-2 {
+  row-gap: 0.5rem;
 }
 
 .gap-y-4 {
@@ -1379,6 +1387,10 @@ img {
   .sm\:w-\[calc\(50\%-10px\)\] {
     width: calc(50% - 10px);
   }
+
+  .sm\:gap-16 {
+    gap: 4rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1468,6 +1480,10 @@ img {
 
   .lg\:mt-12 {
     margin-top: 3rem;
+  }
+
+  .lg\:mt-6 {
+    margin-top: 1.5rem;
   }
 
   .lg\:block {

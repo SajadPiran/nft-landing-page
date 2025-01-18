@@ -542,6 +542,43 @@ $(document).ready( ()=>{
                         },
 
                     },
+                    artists : {
+
+                        title : function () {
+
+                            const observedTarget = observedSection.target;
+                            const animationDelay = + $( observedTarget ).attr( 'data-animation-delay' );
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateY : [ 30 , 0 ],
+                                duration : 1500,
+                                delay : animationDelay
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+                        item : function () {
+
+                            const observedTarget = observedSection.target;
+                            const animationDelay = + $( observedTarget ).attr( 'data-animation-delay' );
+
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateY : [ 50 , 0 ],
+                                duration : 1500,
+                                delay:animationDelay
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+
+                    },
 
                 }
                 if( !'true' === $(observedSection.target).attr('data-has-animated') || undefined === $(observedSection.target).attr('data-has-animated') ) {
