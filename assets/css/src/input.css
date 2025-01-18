@@ -61,4 +61,6 @@
         width: var(--swiper-slide-width) !important;
         @apply lg:ml-4;
     }
+
+    .minting { background: url("../img/minting-bg.webp") }
 }

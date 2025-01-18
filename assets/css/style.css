@@ -705,6 +705,10 @@ img {
   }
 }
 
+.minting {
+  background: url("../img/minting-bg.webp")
+}
+
 .fixed {
   position: fixed;
 }
@@ -761,6 +765,10 @@ img {
   left: 80%;
 }
 
+.left-\[85\%\] {
+  left: 85%;
+}
+
 .left-full {
   left: 100%;
 }
@@ -791,6 +799,10 @@ img {
 
 .top-\[35\%\] {
   top: 35%;
+}
+
+.top-\[5\%\] {
+  top: 5%;
 }
 
 .top-\[60\%\] {
@@ -1154,6 +1166,10 @@ img {
   border-bottom-width: 1px;
 }
 
+.border-t {
+  border-top-width: 1px;
+}
+
 .border-none {
   border-style: none;
 }
@@ -1179,6 +1195,11 @@ img {
   border-bottom-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
 }
 
+.border-t-gray-200 {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
@@ -1196,6 +1217,10 @@ img {
 
 .stroke-black {
   stroke: #000;
+}
+
+.p-16 {
+  padding: 4rem;
 }
 
 .p-2 {
@@ -1243,6 +1268,10 @@ img {
   padding-bottom: 1rem;
 }
 
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1257,12 +1286,20 @@ img {
   line-height: 2.5rem;
 }
 
+.text-\[calc\(1\.5rem\+\.5vw\)\] {
+  font-size: calc(1.5rem + .5vw);
+}
+
 .text-\[calc\(1rem\+\.35vw\)\] {
   font-size: calc(1rem + .35vw);
 }
 
 .text-\[calc\(2rem\+\.5vw\)\] {
   font-size: calc(2rem + .5vw);
+}
+
+.text-\[calc\(3rem\+\.5vw\)\] {
+  font-size: calc(3rem + .5vw);
 }
 
 .text-sm {
@@ -1302,6 +1339,10 @@ img {
 
 .leading-\[calc\(2rem\+\.5vw\)\] {
   line-height: calc(2rem + .5vw);
+}
+
+.leading-\[calc\(3rem\+\.5vw\)\] {
+  line-height: calc(3rem + .5vw);
 }
 
 .text-\[\#741FF5\] {
@@ -1358,6 +1399,11 @@ img {
   border-right-color: rgb(31 41 55 / var(--tw-border-opacity, 1));
 }
 
+.dark\:border-t-gray-800:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(31 41 55 / var(--tw-border-opacity, 1));
+}
+
 .dark\:bg-black:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
@@ -1411,6 +1457,10 @@ img {
 }
 
 @media (min-width: 768px) {
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
   .md\:w-1\/5 {
     width: 20%;
   }
@@ -1435,6 +1485,10 @@ img {
     width: 100%;
   }
 
+  .md\:max-w-\[400px\] {
+    max-width: 400px;
+  }
+
   .md\:max-w-\[450px\] {
     max-width: 450px;
   }
@@ -1449,6 +1503,10 @@ img {
 
   .md\:justify-start {
     justify-content: flex-start;
+  }
+
+  .md\:justify-around {
+    justify-content: space-around;
   }
 
   .md\:gap-x-8 {

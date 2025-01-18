@@ -602,6 +602,109 @@ $(document).ready( ()=>{
                         },
 
                     },
+                    faq : {
+
+                        title : function () {
+
+                            const observedTarget = observedSection.target;
+                            const animationDelay = + $( observedTarget ).attr( 'data-animation-delay' );
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateY : [ 30 , 0 ],
+                                duration : 1500,
+                                delay : animationDelay
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+                        faqs : function () {
+
+                            const observedTarget = observedSection.target;
+                            const animationDelay = + $( observedTarget ).attr( 'data-animation-delay' );
+
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateY : [ 50 , 0 ],
+                                duration : 1500,
+                                delay:animationDelay
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+
+                    },
+                    minting : {
+
+                        title : function () {
+
+                            const observedTarget = observedSection.target;
+                            const animationDelay = + $( observedTarget ).attr( 'data-animation-delay' );
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateY : [ 30 , 0 ],
+                                duration : 1500,
+                                delay : animationDelay
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+                        text : function () {
+
+                            const observedTarget = observedSection.target;
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateY : [ 50 , 0 ],
+                                duration : 1500,
+                                delay : 300
+
+                            } );
+
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+                        shape : function () {
+
+                            const observedTarget = observedSection.target;
+                            const animationDelay = + $( observedTarget ).attr( 'data-animation-delay' );
+                            anime( {
+
+                                targets : observedTarget,
+                                duration : 1500,
+                                scale : [ 0 , 1 ],
+                                delay : animationDelay,
+
+                            } );
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+                        button : function () {
+
+                            const observedTarget = observedSection.target;
+                            anime( {
+
+                                targets : observedTarget,
+                                opacity : [ 0 , 1 ],
+                                translateY : [ -50 , 0 ],
+                                duration : 1500,
+
+                            } );
+
+                            $( observedTarget ).attr( 'data-has-animated' , true ) ;
+
+                        },
+
+                    },
 
                 }
                 if( !'true' === $(observedSection.target).attr('data-has-animated') || undefined === $(observedSection.target).attr('data-has-animated') ) {

@@ -1159,9 +1159,9 @@
     <!--FAQ-->
     <section class="container max-w-[650px] flex flex-col items-center padding">
 
-        <h2 class="w-full text-center text-[calc(2rem+.5vw)] dark:text-white font-bold " >Your questions, <span class="gradient-text-color " >answered! </span> </h2>
+        <h2 class="w-full text-center text-[calc(2rem+.5vw)] dark:text-white font-bold opacity-0" data-animation="faq-title" data-animation-delay="100">Your questions, <span class="gradient-text-color opacity-0" data-animation="faq-title" data-animation-delay="100">answered! </span> </h2>
 
-        <section class="w-full flex flex-col gap-y-4 p-4 border border-gray-200 dark:border-gray-800 rounded-2xl mt-10">
+        <section class="w-full flex flex-col gap-y-4 p-4 border border-gray-200 dark:border-gray-800 rounded-2xl mt-10 opacity-0" data-animation="faq-faqs" data-animation-delay="100">
 
             <section class="flex flex-col pb-4 border-b border-b-gray-200 dark:border-b-gray-800">
 
@@ -1278,7 +1278,7 @@
                 </section>
 
             </section>
-            <section class="flex flex-col pb-4 border-b border-b-gray-200 dark:border-b-gray-800">
+            <section class="flex flex-col pb-4">
 
                 <header class="w-full flex justify-between items-center faq">
 
@@ -1305,6 +1305,110 @@
         </section>
 
     </section>
+
+    <section class="my-20">
+        <img src="assets/img/divider.svg" alt="">
+    </section>
+
+    <!--Minting-->
+    <section class="w-full flex justify-center  minting ">
+
+        <section class="flex flex-col items-center p-16 relative max-w-[650px]">
+
+            <h2 class="w-[80%] text-center text-[calc(3rem+.5vw)] leading-[calc(3rem+.5vw)] dark:text-white font-bold opacity-0" data-animation="minting-title" data-animation-delay="100" >Let's start <span class="gradient-text-color opacity-0" data-animation="minting-title" data-animation-delay="100">Minting </span> </h2>
+
+            <section class="flex flex-col items-center mt-5">
+
+                <p class="text-xs text-center text-balance text-gray-500 dark:text-gray-400 opacity-0" data-animation="minting-text" data-animation-delay="100">invest and manage all your NFT's at one place</p>
+                <a href="" class="w-fit flex gap-x-2 items-center text-white text-xs text-center mt-5 py-3 px-4 rounded-[2rem] gradient-color opacity-0" data-animation="minting-button" >
+                    Get started
+                    <svg class="w-4 h-4"> <use href="#arrow" ></use> </svg>
+                </a>
+
+            </section>
+
+            <!--Shapes-->
+            <section class="w-full h-full  absolute inset-0 z-[-1]">
+
+                <img src="assets/img/x.svg" class="absolute left-[85%] top-[80%] z-[-1] scale-0" alt="" data-animation="subscribe-shape" data-animation-delay="250">
+                <img src="assets/img/circle-01.svg" class="absolute top-[5%] left-[20%] scale-0" alt="" data-animation="subscribe-shape" data-animation-delay="350">
+                <img src="assets/img/ethereum.svg" class="absolute top-[15%] left-[75%] scale-0" alt="" data-animation="subscribe-shape" data-animation-delay="450">
+                <img src="assets/img/dcoin.svg" class="absolute top-[80%] left-[10%] lg:left-[20%] scale-0" alt="" data-animation="subscribe-shape" data-animation-delay="550">
+
+            </section>
+
+        </section>
+
+    </section>
+
+    <footer class="w-full flex justify-center pt-10 mt-10 border-t border-t-gray-200 dark:border-t-gray-800">
+
+        <section class="container padding">
+
+            <!--About Us & Links-->
+            <section class="flex flex-col md:flex-row md:justify-around">
+
+                <!--About Us-->
+                <section class="flex flex-col gap-y-4 md:max-w-[400px]">
+
+                    <span class="font-orbitron font-bold text-[calc(1.5rem+.5vw)] gradient-text-color">NFThub</span>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 text-balance leading-5 ">Join our Discord channel or follow us on Twitter to keep up to date with our latest work and announcements.</p>
+
+                    <!--Links-->
+                    <section class="flex gap-x-4">
+
+                        <svg class="w-4 h-4 dark:fill-white"> <use href="#twitter" ></use> </svg>
+                        <svg class="w-4 h-4 dark:fill-white"> <use href="#instagram" ></use> </svg>
+                        <svg class="w-4 h-4 dark:fill-white"> <use href="#discord" ></use> </svg>
+
+                    </section>
+
+                </section>
+
+                <!--Links-->
+                <section class="flex flex-col md:flex-row mt-10 md:mt-0 md:gap-x-8">
+
+                    <section class="flex flex-col gap-y-4">
+
+                        <span class="text-sm font-bold dark:text-white">Quick Link</span>
+                        <ul class="flex flex-col gap-y-4">
+
+                            <li class="text-xs text-gray-500 dark:text-gray-400"> <a href="">About</a> </li>
+                            <li class="text-xs text-gray-500 dark:text-gray-400"> <a href="">Collection</a> </li>
+                            <li class="text-xs text-gray-500 dark:text-gray-400"> <a href="">Roadmap</a> </li>
+                            <li class="text-xs text-gray-500 dark:text-gray-400"> <a href="">FAQs</a> </li>
+
+                        </ul>
+
+                    </section>
+                    <section class="flex flex-col gap-y-4 mt-10 md:mt-0">
+
+                        <span class="text-sm font-bold dark:text-white"> Community</span>
+                        <ul class="flex flex-col gap-y-4">
+
+                            <li class="text-xs text-gray-500 dark:text-gray-400"> <a href="">How it works!</a> </li>
+                            <li class="text-xs text-gray-500 dark:text-gray-400"> <a href="">Blockchain</a> </li>
+                            <li class="text-xs text-gray-500 dark:text-gray-400"> <a href="">Get in touch</a> </li>
+
+                        </ul>
+
+                    </section>
+
+                </section>
+
+            </section>
+
+            <!--Copyright-->
+            <section class="flex justify-center mt-10">
+
+                <p class="text-xs text-gray-500 dark:text-gray-400">Copyright © 2023 Neko All Rights Reserved.</p>
+
+            </section>
+
+        </section>
+
+
+    </footer>
 
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/anime.min.js"></script>
