@@ -142,6 +142,29 @@ $(document).ready( ()=>{
     swiperObject.slidesSizesGrid = calculateWrapperTranslate( swiperSlides.length - totalSlide );
 
 
+    // FAQ
+    const allFaqs = $('.faq').toArray();
+    $( allFaqs ).each( ( index , faq ) => {
+
+        $( faq ).on( 'click' , () => {
+
+            const textContainer = $( faq.parentElement ).find( 'section' )[1];
+            const svg = $( faq ).find( 'svg' )[0];
+
+            if( '' === textContainer.style.height ) {
+                $( textContainer ).css( 'height' , `${ textContainer.scrollHeight }px` );
+                $( svg ).css( 'rotate' , '180deg' );
+
+            }else{
+                $( textContainer ).css( 'height' , '' );
+                $( svg ).css( 'rotate' , '' );
+            }
+
+        });
+
+    });
+
+
     // Animation
     const sectionAnimation = $('[data-animation]').toArray();
     const sectionAnimationObserver = new IntersectionObserver( ( entry ) => {
