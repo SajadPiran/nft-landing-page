@@ -834,6 +834,10 @@ img {
   margin-left: -1.5rem;
 }
 
+.-mt-1 {
+  margin-top: -0.25rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -860,6 +864,10 @@ img {
 
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -904,6 +912,10 @@ img {
 
 .h-full {
   height: 100%;
+}
+
+.h-px {
+  height: 1px;
 }
 
 .w-1\/2 {
@@ -1151,6 +1163,11 @@ img {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
 }
 
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
@@ -1321,6 +1338,11 @@ img {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
+.dark\:bg-gray-800:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+}
+
 .dark\:bg-gray-900:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
@@ -1351,6 +1373,12 @@ img {
 .dark\:text-white:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+@media (min-width: 576px) {
+  .sm\:w-\[calc\(50\%-10px\)\] {
+    width: calc(50% - 10px);
+  }
 }
 
 @media (min-width: 768px) {
@@ -1477,6 +1505,10 @@ img {
 
   .lg\:w-\[70\%\] {
     width: 70%;
+  }
+
+  .lg\:w-\[calc\(25\%\+60px\)\] {
+    width: calc(25% + 60px);
   }
 
   .lg\:w-full {
